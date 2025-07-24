@@ -3,10 +3,10 @@ import { cookies } from "next/headers";
 import "./globals.css";
 import Image from "next/image";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/app/components/app-sidebar";
-import ThemeSwitcher from "@/app/components/ThemeSwitcher"
+import { AppSidebar } from "@/components/layout/app-sidebar";
+import ThemeSwitcher from "@/components/ui/ThemeSwitcher"
 
-import { ThemeProvider } from "@/app/components/theme-provider"
+import { ThemeProvider } from "@/lib/theme/theme-provider"
 
 export const metadata = {
   title: "Anno 1800 Guides",

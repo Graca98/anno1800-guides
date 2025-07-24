@@ -13,7 +13,7 @@ export default function ThemeSwitcher() {
     setMounted(true)
   }, [])
 
-  if (!mounted) return null // ⛔️ zabrání rozdílu mezi serverem a klientem
+  if (!mounted) return null 
 
   return (
     <Button variant="ghost" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>

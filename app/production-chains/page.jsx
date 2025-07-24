@@ -1,5 +1,5 @@
  
-import ProductionChains from "@/app/components/anno1800/ProductionChains"
+import ProductionChains from "@/app/production-chains/ProductionChains"
  
 export default function Page() {
   return (
