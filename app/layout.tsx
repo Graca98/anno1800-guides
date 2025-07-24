@@ -4,6 +4,9 @@ import "./globals.css";
 import Image from "next/image";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/app/components/app-sidebar";
+import ThemeSwitcher from "@/app/components/ThemeSwitcher"
+
+import { ThemeProvider } from "@/app/components/theme-provider"
 
 export const metadata = {
   title: "Anno 1800 Guides",
@@ -19,26 +22,31 @@ export default async function Layout({
   const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>
-        <SidebarProvider
-          defaultOpen={defaultOpen}
-          open={undefined}
-          onOpenChange={undefined}
-          className={undefined}
-          style={undefined}
-        >
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <SidebarProvider defaultOpen={defaultOpen}>
+        <div className="flex min-h-screen">
+          {/* Sidebar vlevo */}
           <AppSidebar />
-          <SidebarTrigger className="" onClick={undefined} />
-          <div className="font-sans grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-8">
-            <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-              {children}
-            </main>
+
+          {/* Pravá část – obsah */}
+          <div className="flex flex-col w-full">
+            {/* Top navbar */}
+            <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-background">
+              <SidebarTrigger />
+              <ThemeSwitcher />
+            </div>
+
+            {/* Hlavní obsah */}
+            <main className="flex-1 p-8">{children}</main>
+
+            {/* Footer */}
             <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
               <a
                 className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -72,8 +80,10 @@ export default async function Layout({
               </a>
             </footer>
           </div>
-        </SidebarProvider>
-      </body>
+        </div>
+      </SidebarProvider>
+    </ThemeProvider>
+  </body>
     </html>
   );
 }

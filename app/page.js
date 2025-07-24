@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (<>
-        <p>Test</p>
         <p>lorem ipsum something something</p>
         <p>
           Veniam veniam non id ad id quis consequat sunt laborum laboris ad eu

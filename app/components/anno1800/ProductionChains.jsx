@@ -1,7 +1,17 @@
+import Image from "next/image"
 
 export default function ProductionChains() {
     return(<>
         <p>Productiins</p>
+        <Image
+          aria-hidden
+          src="/production-chains.jpeg"
+          alt="Production chain"
+          width={1412}
+          height={800}
+        />
+        
+                  
         <p>
           Veniam veniam non id ad id quis consequat sunt laborum laboris ad eu
           enim. Magna eu consequat dolor sit nostrud fugiat proident cillum
