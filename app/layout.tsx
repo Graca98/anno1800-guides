@@ -48,22 +48,8 @@ export default async function Layout({
 
             {/* Footer */}
             <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-              <a
-                className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-                href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                <Image
-                  aria-hidden
-                  src="/apple-touch-icon.png"
-                  alt="File icon"
-                  width={16}
-                  height={16}
-                  />
-                Learn
-              </a>
-              <a
+              <p className="text-muted-foreground text-sm">Veškerý obsah třetích stran zůstává majetkem jejich původních autorů. Pokud zde naleznete svůj obsah a přejete si jeho odstranění, kontaktujte mě.</p>
+              {/* <a
                 className="flex items-center gap-2 hover:underline hover:underline-offset-4"
                 href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
                 target="_blank"
@@ -77,7 +63,7 @@ export default async function Layout({
                   height={16}
                   />
                 Examples
-              </a>
+              </a> */}
             </footer>
           </div>
         </div>

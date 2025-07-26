@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -18,8 +18,6 @@ import image4Full from "@/public/images/ProductionChainsSeason3-full.webp";
 import image5 from "@/public/images/ProductionChainsSeason4.png";
 import image5Full from "@/public/images/ProductionChainsSeason4-full.webp";
 
-
-
 export default function ProductionChains() {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
@@ -28,10 +26,19 @@ export default function ProductionChains() {
 
   return (
     <>
-      <p>Production chains for season pass 2 (Land of Lions & Bright Harvest)</p>
+      <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">Production chains for all base game DLCs</h2>
+      <p className="leading-7 [&:not(:first-child)]:mt-6">
+        Production chains for season pass 2 (Land of Lions & Bright Harvest)
+      </p>
 
       {/* Obrázek 1 */}
-      <div onClick={() => { setIndex(0); setOpen(true); }} style={{ cursor: "zoom-in" }}>
+      <div
+        onClick={() => {
+          setIndex(0);
+          setOpen(true);
+        }}
+        style={{ cursor: "zoom-in" }}
+      >
         <Image
           aria-hidden
           src={image1}
@@ -41,9 +48,18 @@ export default function ProductionChains() {
         />
       </div>
 
-      <p>Production chains for construction materials and buildings related to electricity, fuel, silos etc.</p>
+      <p className="leading-7 [&:not(:first-child)]:mt-6">
+        Production chains for construction materials and buildings related to
+        electricity, fuel, silos etc.
+      </p>
       {/* Obrázek 2 */}
-      <div onClick={() => { setIndex(1); setOpen(true); }} style={{ cursor: "zoom-in" }}>
+      <div
+        onClick={() => {
+          setIndex(1);
+          setOpen(true);
+        }}
+        style={{ cursor: "zoom-in" }}
+      >
         <Image
           aria-hidden
           src={image2}
@@ -53,9 +69,15 @@ export default function ProductionChains() {
         />
       </div>
 
-      <p>Production chains of consumer goods from Season 2 Pass DLCs</p>
+      <p className="leading-7 [&:not(:first-child)]:mt-6">Production chains of consumer goods from Season 2 Pass DLCs</p>
       {/* Obrázek 3 */}
-      <div onClick={() => { setIndex(2); setOpen(true); }} style={{ cursor: "zoom-in" }}>
+      <div
+        onClick={() => {
+          setIndex(2);
+          setOpen(true);
+        }}
+        style={{ cursor: "zoom-in" }}
+      >
         <Image
           aria-hidden
           src={image3}
@@ -65,9 +87,18 @@ export default function ProductionChains() {
         />
       </div>
 
-      <p>Production chains of consumer goods, Food & Drink Venues and Shopping Arcades from Season 3 Pass DLCs</p>
+      <p className="leading-7 [&:not(:first-child)]:mt-6">
+        Production chains of consumer goods, Food & Drink Venues and Shopping
+        Arcades from Season 3 Pass DLCs
+      </p>
       {/* Obrázek 4 */}
-      <div onClick={() => { setIndex(3); setOpen(true); }} style={{ cursor: "zoom-in" }}>
+      <div
+        onClick={() => {
+          setIndex(3);
+          setOpen(true);
+        }}
+        style={{ cursor: "zoom-in" }}
+      >
         <Image
           aria-hidden
           src={image4}
@@ -77,9 +108,18 @@ export default function ProductionChains() {
         />
       </div>
 
-      <p>Production chains of consumer goods, drop goods and advanced emergency services from Season 4 Pass DLCs</p>
+      <p className="leading-7 [&:not(:first-child)]:mt-6">
+        Production chains of consumer goods, drop goods and advanced emergency
+        services from Season 4 Pass DLCs
+      </p>
       {/* Obrázek 5 */}
-      <div onClick={() => { setIndex(4); setOpen(true); }} style={{ cursor: "zoom-in" }}>
+      <div
+        onClick={() => {
+          setIndex(4);
+          setOpen(true);
+        }}
+        style={{ cursor: "zoom-in" }}
+      >
         <Image
           aria-hidden
           src={image5}
@@ -89,7 +129,16 @@ export default function ProductionChains() {
         />
       </div>
 
-      <p>Full link to unofficial wiki <a href="https://anno1800.fandom.com/wiki/Production_chains" className="text-primary underline-offset-4 hover:underline" target="_blank">Production chains</a></p>
+      <p className="leading-7 [&:not(:first-child)]:mt-6">
+        Full link to unofficial wiki{" "}
+        <a
+          href="https://anno1800.fandom.com/wiki/Production_chains"
+          className="text-primary underline-offset-4 hover:underline"
+          target="_blank"
+        >
+          Production chains
+        </a>
+      </p>
       <p>All credits go to these awsome guys</p>
 
       {/* Lightbox */}
@@ -101,7 +150,6 @@ export default function ProductionChains() {
         render={{ slide: NextJsImage }}
         styles={{ container: { zIndex: 9999 } }}
       />
-
     </>
   );
 }
