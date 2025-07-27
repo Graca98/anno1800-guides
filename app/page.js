@@ -1,47 +1,62 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/button"
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <p>Test</p>
-        <p>lorem ipsum something something</p>
-        <Button>Click me</Button>
-        
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-      </footer>
-    </div>
+    <>
+      <p className="p-default">
+        Tato stránka vznikla jako sbírka všech užitečných nástrojů, galerií,
+        layoutů a odkazů pro Anno 1800 a časem i další hry. Cílem je mít vše
+        důležité na jednom místě – bez složitého hledání.
+      </p>
+      <p className="p-default">
+        Všechny materiály pochází z různých komunitních zdrojů. Autorství
+        respektuji – pokud je tu něco vaše a chcete to stáhnout, ozvěte se.
+      </p>
+      <p className="p-default">
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+      </p>
+
+      <p className="p-default">
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+        Deserunt proident culpa amet ullamco cupidatat. Ullamco irure dolor
+        Lorem do consectetur. Ad ipsum elit ea id cupidatat.
+      </p>
+    </>
   );
 }

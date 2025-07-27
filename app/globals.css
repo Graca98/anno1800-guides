@@ -45,8 +45,6 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -76,6 +74,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
 }
 
 .dark {
@@ -119,4 +119,24 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Max šírka pro navbar + zarovnání na střed */
+  .container-navbar {
+    @apply shadow-none mx-auto max-w-screen-xl w-full px-2;
+  }
+  
+  /* Maximální šírka obsahu stránek + zarovnání na střed */
+  .container-default {
+    @apply max-w-screen-xl w-full mx-auto px-4 pt-6 md:pt-10 lg:pt-12 flex-grow justify-items-center;
+  }
+
+  /* Max šírka pro navbar + zarovnání na střed */
+  .container-footer {
+    @apply max-w-screen-xl w-full mx-auto px-4 pt-6 md:pt-10 lg:pt-12 flex-grow justify-items-center [&:not(:first-child)]:mt-16 mb-4;
+  }
+   .p-default {
+    @apply leading-7 [&:not(:first-child)]:mt-6
+   }
+  
 }
+
