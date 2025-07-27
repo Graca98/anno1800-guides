@@ -119,6 +119,24 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Max šírka pro navbar + zarovnání na střed */
+  .container-navbar {
+    @apply shadow-none mx-auto max-w-screen-xl w-full px-2;
+  }
+  
+  /* Maximální šírka obsahu stránek + zarovnání na střed */
+  .container-default {
+    @apply max-w-screen-xl w-full mx-auto px-4 pt-6 md:pt-10 lg:pt-12 flex-grow justify-items-center;
+  }
+
+  /* Max šírka pro navbar + zarovnání na střed */
+  .container-footer {
+    @apply max-w-screen-xl w-full mx-auto px-4 pt-6 md:pt-10 lg:pt-12 flex-grow justify-items-center [&:not(:first-child)]:mt-16 mb-4;
+  }
+   .p-default {
+    @apply leading-7 [&:not(:first-child)]:mt-6
+   }
   
 }
 

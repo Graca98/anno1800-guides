@@ -4,9 +4,9 @@ import "./globals.css";
 import Image from "next/image";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/layout/app-sidebar";
-import ThemeSwitcher from "@/components/ui/ThemeSwitcher"
+import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
 
-import { ThemeProvider } from "@/lib/theme/theme-provider"
+import { ThemeProvider } from "@/lib/theme/theme-provider";
 
 export const metadata = {
   title: "Anno 1800 Guides",
@@ -29,27 +29,36 @@ export default async function Layout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <SidebarProvider defaultOpen={defaultOpen}>
-        <div className="flex min-h-screen">
-          {/* Sidebar vlevo */}
-          <AppSidebar />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SidebarProvider defaultOpen={defaultOpen}>
+            {/* Sidebar vlevo */}
+            <AppSidebar />
 
-          {/* Pravá část – obsah */}
-          <div className="flex flex-col w-full">
-            {/* Top navbar */}
-            <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-background">
-              <SidebarTrigger />
-              <ThemeSwitcher />
-            </div>
+            <div className="flex flex-col w-full max-w-screen-xl mx-auto">
+              <div className="container-navbar flex items-center justify-between">
+                {/* Top navbar */}
+                <div className="">
+                  <SidebarTrigger />
+                </div>
+                <div className="">
+                  <ThemeSwitcher />
+                </div>
+              </div>
 
-            {/* Hlavní obsah */}
-            <main className="flex-1 p-8">{children}</main>
+              {/*todo Obsah stránek se správně nezarovnáva na střed */}
+              {/* Hlavní obsah */}
+              <div className="container-default">
+                <main className="">{children}</main>
+              </div>
 
-            {/* Footer */}
-            <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-              <p className="text-muted-foreground text-sm">Veškerý obsah třetích stran zůstává majetkem jejich původních autorů. Pokud zde naleznete svůj obsah a přejete si jeho odstranění, kontaktujte mě.</p>
-              {/* <a
+              {/* Footer */}
+              <footer className="container-footer">
+                <p className="text-muted-foreground text-sm">
+                  Veškerý obsah třetích stran zůstává majetkem jejich původních
+                  autorů. Pokud zde naleznete svůj obsah a přejete si jeho
+                  odstranění, kontaktujte mě.
+                </p>
+                {/* <a
                 className="flex items-center gap-2 hover:underline hover:underline-offset-4"
                 href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
                 target="_blank"
@@ -64,12 +73,11 @@ export default async function Layout({
                   />
                 Examples
               </a> */}
-            </footer>
-          </div>
-        </div>
-      </SidebarProvider>
-    </ThemeProvider>
-  </body>
+              </footer>
+            </div>
+          </SidebarProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
